@@ -1,0 +1,130 @@
+﻿Setting/attribute;Usage
+**Value within paranthesis indicates the default value for the setting.**;
+**add_ext_auto (yes)**;Add fileextension .csv to file (if it's not specified in the source_files). Set to no if you don't want a file extension to be added automatically. A common use for this is to set this setting to no , so google documents could be accessed (they don't have .csv at the end).
+**api_cdn (yes)**;(Applicable when fetching json) Set this to no if you want to use wordpress api (wordpress core api could fail with cloudflare for unknown reason)
+**editable (no)**;yes/no;The default is no. If set to yes file(s), the logged in user may edit values directly in the table (through changing values in input-fields) if logged in. Some attributes are temporarily disabled when editing but when set to no or logged out, these attributes are restored.
+**convert_encoding_from**;When converting character encoding, define what current characterencoding that csv file has. (Not required and use only when having issues with encoding)
+**convert_encoding_to**;When converting character encoding, define what characterencoding that csv should be encoded to. (Not required and use only when having issues with encoding)
+**css_max_width (760)**;Media query css rules/breakpoint. This is only applied when responsive is set to yes.
+**css_min_devicewidth (768)**;Media query css rules/breakpoint. This is only applied when responsive is set to yes.
+**css_max_devicewidth (1024)**;Media query css rules/breakpoint. This is only applied when responsive is set to yes.
+**csv_delimiter (,)**;What delimiter to use in each line of csv (comma, semicolon etc)
+**debug_mode (no)**;If set to yes then header-values and row-values would be output to screen and files like &quot;file not found&quot; will be displayed (otherwise it would be &quot;silent errors&quot;)
+**design_template (outofthebox1)**;What template from builtin templates to use in table. Possible values are: outofthebox1, nolines, clean, funky, thick, pyjamas, pyjamascols, thinlines
+**downloadable (no)**;If set to yes, a button is shown that creates a download of a csv 
+**downloadable_filename (export_csvtohtml.csv)**;What filename to use when downloading  
+**downloadable_text (Download as csv)**;What text to show on downloadable button
+**eol_detection (cr/lf)**;CR = Carriage return, LF = Line feed, CR/LF = Carriage line and line feed, auto = autodetect. Only applied to external files. When using local files, new lines are automatically autodeteced.
+**exclude_cols**;What columns to exclude in final html table (1,2,3,10-15 would exclude columns 1,2,3,10,11,12,13,14 and 15). If you want to remove the last column, then simply type last instead of entering a number.
+**fetch_interval**;Set to daily, hourly or weekly. This is how often the actual fetch from source is done. It's only done when requesting the page with this shortcode on. This would make sense to use for external files even if it's possible to use with local files as well. For this to work you must specify a html_id!
+**fetch_lastheaders (0)**;Number of specific headers (e.g. columns) to retrieve (from the end)
+**filter_data**;What data to filter in table (specific string), e.g. FSC
+**filter_data_ucfirst (no)**;If set to yes, first letter will be uppercase (applies only to a-z)
+**filter_operator (equals)**;Tell how to apply the filter
+**filter_operators (equals)**;Works exactly as filter_operator
+***between***;>= value1 and <= value2
+***isempty or is_empty***;this is an empty value 
+***equals***;(=) 
+***nequals***;(!=, not equals to) 
+***equals_caseinsensitive***;equals with case insensitive filter
+***urlequals***;equals case insensitive and search both with hypens/spaces and underscores
+***less***;<
+***lequal***;<=
+***more***;>
+***mequal***;>=
+***wildcard***;any
+***newdates***;from specific date or from todays date
+**filter_removechars**;If having more characters than just numbers in the (cell)values, remove that/those characters so comparision will be done for numbers only (e.g. 567 will be used for comparision if $567 is displayed)
+**filter_col or filter_cols**;What column(s) to use filter on (Several columns work)   
+**filter_criterias**;Specify which columns to create a filter for based on AND/OR - logic.
+**fixed_leftcol (no)**;Use fixed left column (or not). Use in combination with fixed or sticky header
+**float_divider (.)**;If fetching float values from csv use this character to display another &quot;float-divider chacter&quot; than dot (e.g. 6,3 instead of 6.3, 1,2 instead of 1.2 etc)
+**header_backgroundcolor**;background color of header   
+**header_type**;header type. Can be set to sticky (header fixed on scroll) or fixed (requires a table height (table_height attribute))
+**grabcontent_col_fromlink**;Get content from another column to use as a link in specified column with grabcontent_col_tolink
+**grabcontent_col_tolink**;Get content from another column to use as a link in specified column => (<a href link with grabbed content from grabcontent_col_fromlink">{tolink col's content}</a>
+**grabcontent_col_tolink_addhttps (yes)**;this adds https instead of a link (instead of google.se it would be https://www.google.se/)
+**groupby_col**;Group by a column (e.g. If different companies are listed in that column, grouping will be done for companies)
+**groupby_col_header (yes)**;If using groupby_col and this is set to yes, show headers on a row before all rows for this grouped value is shown
+**headerrow_exists (yes)**;Tells if there are any headerrow in the file.
+**headerrows_start**;Which row in file that headers will be generated from
+**hide_cols**;If you want to include columns but don't show them (could be useful when merging two columns together to a link with grabcontent_fromlink / grabcontent_col_tolink). If setting a column number, this number is based on the table after including/excluding columns.
+**html_id**;set id of this table
+**html_class**;set class of this table (besides default csvtohtml;class)
+**hidetable_load (no)**;Hide table at pageload if set to yes
+**hidetable_reset (no)**;Hide table when clicking reset button if set to yes (otherwise full table would show even if hidetable_load is set)
+**htmltags_autoconvert (no)**;Set to yes if you want to (auto)convert links to html-links (&lt;a&gt;), images to &lt;img&gt; and mail to &quot;maillinks&quot; (link with mailto:).
+**htmltags_autoconvert_imagealt (empty string)**;Set alt text for all images OR based on a specific columns value (e.g. if set to 2 then grab value from second column for the same row that image is on)
+**htmltags_autoconvert_imagewidth**;Set a specific width for images converted from plain image-link. Units that can be used are: px (default), em, rem, % or vw.
+**htmltags_autoconvert_newwindow (no)**;If ordinary links, open them up in a new window. This attribute only has effect when htmltags_autoconvert is set to yes
+**markdown_support (no)**;Set to yes if you want to convert markdown to html
+**include_cols**;What columns to include in final html table (1,2,3,10-15 would display column 1,2,3,10,11,12,13,14 and 15). If include_cols is given, then exclude_cols is ignored.
+**include_rows**;What rows to include in final html table (1,2,3,10-15 would display row 1,2,3,10,11,12,13,14 and 15).
+**json_startlevel**;When using json as source_type the plugin would fetch data from first level in json hiearchy
+**large_files**;Set to yes if dealing with large files and need to lower memory usage from server.
+**notfound_message (no)**;What message to show when searchresult not found. (search_functionality must be set to yes for this option to be valid)
+**pagination (no)**;Tells if pagination should be used or not (yes/no). Default is no.
+**pagination_above_table (no)**;Show pagination above table. Pagination must be set to yes for this to work.
+**pagination_below_table (yes)**;Show pagination below table. Pagination must be set to yes for this to work.
+**pagination_links_max (10)**;Show links (1,2,3... up to 10 links as default). Set to 0 if you do not want to show these links at all.
+**pagination_rows (10)**;Nr of rows to show for each pagination.
+**pagination_start (1)**;Row to start pagination with (generally always 1)            
+**pagination_text_last (Last)**;Text last for pagination. Set to &quot;&quot; if you do not want to show (if pagination is set to yes).
+**pagination_text_next (Next)**;Text Next for pagination. Set to &quot;&quot; if you do not want to show (if pagination is set to yes).
+**pagination_text_prev (Prev)**;Text Prev (previous) for pagination. Set to &quot;&quot; if you do not want to show (if pagination is set to yes).
+**pagination_text_start (Start)**;Text start for pagination. Set to &quot;&quot; if you do not want to show (if pagination is set to yes).
+**path**;Relative path to uploads-folder of the wordpress - installation ( eg. /wp-content/uploads/{path} ). Applies to local files.
+**resetbutton_text (Reset)**;Reset button text  (search_functionality must be set to yes for this option to be valid)
+**preservefilter_search (no)**;Set to yes if you want to preserve original filter when searching. When searching and having set a filter when table loaded, this filter can now be "fixed" while searching is done in columns that are not filtered 
+**responsive (yes)**;yes/no - The default is yes, but this could be set to no if you have issues with other css on your site.
+**return_rows_array (no)**;yes/no. Useful if you create own code and want to retrieve data only.
+**search_exactmatch (no)**;Use exact match for search (e.g. Great retrieves values such as Great, not Great Britain)
+**search_caseinsensitive (yes)**;Use case insensitive (e.g. Great and great returns Great or great on search)
+**search_cols**;What columns to search in when using search functionality. Include and exclude cols are ignored when using this setting/attribute. If no value is given to this attribute/setting - all columns are searched.
+**search_excludedrows** (no);Search in excluded rows (e.g. if include_rows = "1-10" search in row 11-10000 would be done if those rows exists in table/file)
+**search_functionality (no)**;Make table data searchable (a searchinput field, a searchbutton and a reset-button is displayed).
+**search_highlight (no)**;Show highlighted filtered or search
+**search_highlightcolor (yellow)**;Color to show as highlighted 
+**searchbutton_text (Search)**;Search button text (search_functionality must be set to yes for this option to be valid)
+**searchinput_placeholder (empty string)**;Placeholder for searchinput field. Default is empty.
+**search_requiredchars (0)**;How many characters that are required when doing a search. Default 0 tells there are no requirement.
+**search_requiredchars_message (empty string)**;Message to user if not required characters are valid when doing a search. If this is not set, then a standard message will appear. 
+**search_realtime (no)**;Set to yes if you want the system to search without hitting any button (after user typed some characters). There's a delay in about 1 second after user has begun typing
+**selected_sheets**;If fetching content from an excel-file, then define what sheet(s) you want by index or name in format nr-nr or name(s), e.g. 1-3,glowsheet,mindblown would return content from sheet 1,2,3 and the sheets named glowsheet and mindblown.
+**show_onlyloggedin (no)**;Table is only shown when user is logged in (the table is not intended for public view) 
+**skip_headerrow (no)**;Set to yes if you don't want to include headers (headerrow)
+**sort_cols**;Which column(s) to sort on in format nr,nr och nr-nr (example 1,2,4 or 1-2,4)
+**sort_cols_order (asc)**;Which order to sort columns on (asc/desc). If you have 3 columns, you can define these with different sorting like asc,desc,asc      
+**sort_cols_userclick**;sort_cols must be set. if this is set to you, user can click to sort a specific column. This overrides sort_cols_order after first click
+**sort_cols_userclick_arrows**;sort_cols_userclick must be set. Arrows are shown in headercolumns indicated ascending or descending order.
+**source_files**;file(s) to include. If using more than one file - separate them with a semicolon (;). It 's possible to include a full url instead of a filename to fetch external csv files. It's also possible to fetch files from a given path (with for example *.csv). 
+**source_type (visualizer_plugin)**;What type to use for identifying content in csv-files (valid types are guess and visualizer_plugin). If you're unsure what to set, set &quot;guess&quot; here.
+**table_fixedlayout (no)**;If you set this to set, the table with have a fixed layout (calulated width based on top row of table). Faster but not always expected results.
+**table_in_cell_cols**;You can choose to have extra data in a table in a cell from specific column(s) given (same format as include_cols). exclude_cols is ignored if this is used. This could be useful if you want to do a hover-effect to show some extra data.
+**table_in_cell_header (More data)**;Column name for added data, if table_in_cell_cols is specified and table_in_cell_header is not the default value is: &quot;More Data&quot;
+**table_in_cell_wrapperclass**;Class for div surrounding table inside cell when using table_in_cell_cols
+**table_height**;Table height in px, em, rem, % or vh. Use together with fixed header
+**table_offset_header (0)**;Offset of header in relation to it's parent. Primarily used for sticky/fixed headers.
+**table_width**;Table width in px, em, rem, % or vw. Use together with fixed left column
+**title**;Set title that is shown as text in top left corner of html table (If not set - nothing is shown)
+**total_percentage_above_table (yes)**;Show total percentage of a specific value above table. Ignored if total_percentage_chechkvalue and total_percentage_col is not set.
+**total_percentage_below_table (no)** ;Show total percentage of a specific value below table. Ignored if total_percentage_chechkvalue and total_percentage_col is not set.
+**total_percentage_checkvalue**;Check percentage of a specific value in a specific column. totals_pecentage_col must be specified.
+**total_percentage_col**;Which column to check in. total_percentage_chechkvalue must be specified for this to work
+**total_percentage_text**;Define what text to say when using total_percentage_checkvalue. If not defined it will only show percentage value followed by %
+**total_percentage_decimals (0)**;Number of decimals to show when showing total percentage             
+**totals_cols_bottom**;Add totals with given columns at bottom of table (example 1,2,4 or 1-2,4)
+**totals_cols_bottom_empty**;What string/character to show when there's no calculation
+**totals_cols_bottom_title**;Set a specific string when added totals (overrides totals value and totals_cols_bottom_empty)
+**totals_cols_bottom_title_col**;Which column to set this specific title at     
+**totals_cols_prefix (empty string)**;Add prefix to the total column(s) (e.g. $10)
+**totals_cols_suffix (empty string)**;Add suffix to the total column(s) (e.g. 10$)
+
+**SPECIAL VARIABLES / CHARACTERS**;
+usage for path: If **%userlogin%** is specified somewhere in **path**, then replace that with the actual username of logged in user (e.g. csvtohtmlfiles/**%userlogin%** would load different files based on which user that is logged in);
+usage for path: If **%userid%** is specified somewhere in **path**, then replace that with the actual userid of logged in user (e.g. csvtohtmlfiles/**%userid%** would load different files based on which user that is logged in);
+usage for path: If **%temp%** is set, then base would be examples folder of plugin instead of wp-content/uploads. Files will be deleted upon next update of the plugin.
+usage for entering file (local files): Wildcards for filesearch with * (e.g. beliver*.csv would include all csv files that began with beliver in it's filename);
+usage for filter_data: **%urlparts-X** where the X indicates pathlevel (e.g if %urlparts-2 path would be site/path1/path2).;
+;
+**%userlogin%** and **%userid%** could also be used within filter_data;

@@ -1,0 +1,259 @@
+/* templates */
+
+/* nolines */
+.csvtohtml.csvtohtml-template-nolines {
+    border:none;
+}
+
+.csvtohtml.csvtohtml-template-nolines th {
+    text-align: left;
+}
+
+.csvtohtml.csvtohtml-template-nolines td {
+    border:none;
+    padding:0.2em 1em 0;
+}
+
+.csvtohtml.csvtohtml-template-nolines tr.rowset {
+    padding-bottom:2em;
+}
+
+.csvtohtml.csvtohtml-template-nolines tr.rowset td::before {
+    font-weight: bold;
+    font-size:0.9rem;    
+}
+
+
+/* clean */
+.csvtohtml.csvtohtml-template-clean {
+    border:none;
+    outline:1px solid #333;
+}
+
+.csvtohtml.csvtohtml-template-clean th {
+    text-align: left;
+}
+
+.csvtohtml.csvtohtml-template-clean td {
+    border-right:1px solid #333;
+    padding:0.2em 1em 0 0.4em;
+}
+
+.csvtohtml.csvtohtml-template-clean tr.rowset {
+    padding-bottom:2em;
+}
+
+.csvtohtml.csvtohtml-template-clean tr.rowset td::before {
+    font-weight: bold;
+    font-size:0.9rem;    
+}
+
+.csvtohtml.csvtohtml-template-clean tr.rowset {
+    padding-bottom:2em;
+}
+
+
+/* funky */
+.csvtohtml.csvtohtml-template-funky {
+    border:none;
+    outline:8px solid rgb(222, 148, 30);
+}
+
+.csvtohtml.csvtohtml-template-funky th {
+    text-align: left;
+}
+
+.csvtohtml.csvtohtml-template-funky td {
+    border:1px solid rgb(222, 148, 30);
+    background:rgb(250, 43, 43);
+    color:#fff;
+    padding:0.2em 1em 0 0.4em;
+}
+
+.csvtohtml.csvtohtml-template-funky tr.rowset {
+    padding-bottom:2em;
+}
+
+.csvtohtml.csvtohtml-template-funky tr.rowset td::before {
+    font-weight: bold;
+    font-size:0.9rem;    
+}
+
+.csvtohtml.csvtohtml-template-funky tr.rowset {
+    padding-bottom:2em;
+}
+
+
+/* thick */
+.csvtohtml.csvtohtml-template-thick {
+    border:10px solid #000;
+}
+
+.csvtohtml.csvtohtml-template-thick th {
+    text-align: left;
+}
+
+.csvtohtml.csvtohtml-template-thick td {
+    border:5px solid rgb(0, 0, 0);
+    padding:0.2em 1em 0 0.4em;
+}
+
+.csvtohtml.csvtohtml-template-thick tr.rowset {
+    padding-bottom:2em;
+}
+
+/* thinlines */
+.csvtohtml.csvtohtml-template-thinlines {
+    border:1px solid #000;
+}
+
+.csvtohtml.csvtohtml-template-thinlines th {
+    text-align: left;
+}
+
+.csvtohtml.csvtohtml-template-thinlines td {
+    border:1px solid rgb(0, 0, 0);
+    padding:0.2em 1em 0 0.4em;
+}
+
+.csvtohtml.csvtohtml-template-thinlines tr.rowset {
+    padding-bottom:2em;
+}
+
+
+/* pyjamas */
+.csvtohtml.csvtohtml-template-pyjamas {
+    border:none;
+}
+
+.csvtohtml.csvtohtml-template-pyjamas th {
+    text-align: left;
+}
+
+.csvtohtml.csvtohtml-template-pyjamas td {
+    padding:0.2em 1em 0 0.4em;
+}
+
+.csvtohtml.csvtohtml-template-pyjamas tr.rowset.odd td {
+    background:#eee;
+}
+
+.csvtohtml.csvtohtml-template-pyjamas tr.rowset.even td {
+    background:#ddd;
+}
+
+.csvtohtml.csvtohtml-template-pyjamas tr.rowset {
+    padding-bottom:2em;
+}
+
+/* pyjamascols */
+.csvtohtml.csvtohtml-template-pyjamascols {
+    border:none;
+}
+
+.csvtohtml.csvtohtml-template-pyjamascols th {
+    text-align: left;
+}
+
+.csvtohtml.csvtohtml-template-pyjamascols td {
+    padding:0.2em 1em 0 0.4em;
+}
+
+.csvtohtml.csvtohtml-template-pyjamascols td:nth-child(odd) {
+    background:#eee;
+}
+
+.csvtohtml.csvtohtml-template-pyjamascols td:nth-child(even) {
+    background:#ddd;
+}
+
+.csvtohtml.csvtohtml-template-pyjamascols tr.rowset {
+    padding-bottom:2em;
+}
+
+/* out of the box 1 */
+.csvtohtml.csvtohtml-template-outofthebox1 {
+    border-collapse: collapse;    
+    margin-bottom:0.5em;
+    max-width: 100%;
+}
+.csvtohtml.csvtohtml-template-outofthebox1 td, th {
+    padding: 0.2em 0.6em 0.2em 0.2em; 
+}
+
+.csvtohtml.csvtohtml-template-outofthebox1 td {
+    padding-top:0.4em;
+    padding-bottom:0.4em;
+}
+
+.csvtohtml.csvtohtml-template-outofthebox1 tr.rowset.odd td {
+    background:#f9f9f9;
+}
+
+.csvtohtml.csvtohtml-template-outofthebox1 tr.rowset.even td {
+    background:#fff;
+}
+
+.csvtohtml.csvtohtml-template-outofthebox1 tbody tr {
+    transition-property: background;
+    transition-duration: 0.7s;
+}
+
+.csvtohtml.csvtohtml-template-outofthebox1 tbody tr:hover td {
+    background:#eee !important;
+}
+
+.csvtohtml.csvtohtml-template-outofthebox1 thead th {
+    font-size:1.3rem;
+    text-align: left;
+    vertical-align: middle;
+    word-break: normal;
+    background-color:#d9edf7;
+    color:#333;
+}
+
+.csvtohtml-template-outofthebox1 div.csv-search input {
+    padding:0.3em 0.4em;
+    margin:0.2em 0.4em 1em 0;
+    display:inline-block;
+    background:#fff;
+    text-decoration: none;
+    transition-property: background;
+    transition-duration: 2s;
+    color:#000 !important;
+    font-size:1.1rem;
+    outline:none;
+    border:2px solid #eee;
+    width:auto;
+    position: relative;
+}
+
+.csvtohtml-template-outofthebox1 .csv-search input:hover  {
+   border:2px solid #ddd;
+     
+}
+
+.csvtohtml-template-outofthebox1 .csv-search input[type="button"]:hover  {
+    cursor: pointer;
+}
+
+.csvtohtml-template-outofthebox1 .csvhtml-pagination a, 
+.csvtohtml-template-outofthebox1 .csvhtml-pagination a:link, 
+.csvtohtml-template-outofthebox1 .csvhtml-pagination a:active
+{
+    padding:0.3em 0.4em;
+    margin:0.2em 0.4em 1em 0;
+    display:inline-block;
+    background:#ddd;
+    text-decoration: none;
+    transition-property: background;
+    transition-duration: 1s;
+    color:#000 !important;
+    font-size:1.1rem;
+    outline:1px solid #000;    
+}
+
+.csvtohtml-template-outofthebox1 .csvhtml-pagination a:hover {
+    background:#eee;
+    outline:1px solid #444;  
+}

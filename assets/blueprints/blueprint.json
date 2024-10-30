@@ -1,0 +1,38 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "landingPage": "/wp-admin/",
+    "preferredVersions": {
+        "php": "latest",
+        "wp": "latest"
+    },
+	"features": {
+        "networking": true
+    },	
+    "phpExtensionBundles": ["kitchen-sink"],
+    "steps": [
+        {
+            "step": "login",
+            "username": "admin",
+            "password": "password"
+        },
+        {
+            "step": "setSiteOptions",
+            "options": {
+                "blogname": "CSV to HTML",
+                "blog_charset": "UTF-8",
+                "template": "twentytwentyfour",
+                "stylesheet": "twentytwentyfour"
+            }
+        },		
+        {
+            "step": "installPlugin",
+            "pluginZipFile": {
+                "resource": "wordpress.org/plugins",
+                "slug": "csv-to-html"
+            },
+            "options": {
+                "activate": true
+            }
+        }        
+    ]
+}

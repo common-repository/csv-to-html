@@ -1,0 +1,233 @@
+div.csvtohtml-tablescroll {
+	position: relative;
+	z-index: 1;	
+}
+
+div.csvtohtml-tablescroll table.csvtohtml thead th {
+	position: -webkit-sticky;
+	position: sticky;
+}
+
+/* safari and ios need the tfoot itself to be position:sticky also */
+div.csvtohtml-tablescroll table.csvtohtml tfoot,
+div.csvtohtml-tablescroll table.csvtohtml tfoot th,
+div.csvtohtml-tablescroll table.csvtohtml tfoot td {
+	position: -webkit-sticky;
+	position: sticky;
+	bottom: 0;
+	z-index:4;
+}
+
+div.csvtohtml-tablescroll table.csvtohtml thead th:first-child {
+	position: -webkit-sticky;
+	position: sticky;
+	left: 0;
+	z-index: 2;
+}
+
+div.csvtohtml-tablescroll table.csvtohtml thead th:first-child,
+div.csvtohtml-tablescroll table.csvtohtml tfoot th:first-child {
+	z-index: 5;
+}
+
+
+form.sc_attributes {
+    display:none;
+}
+
+/* Hide columns */
+table.csvtohtml td.hide-column, table.csvtohtml th.hide-column {
+	display:none;
+}
+
+/* 
+	This is done setting display to none for optimization. useful for larger tables 
+	It set set to block when loading dom is ready
+*/
+table.csvtohtml {
+	display:none;
+} 
+
+ /*Helps reduce time a lot because no calculations of 
+ different widths are needed before rendering table 
+ but it only calculates from the table's first row and that would
+ sometime mess up tablecells
+ */
+table.csvtohtml.table-fixedlayout {
+	table-layout: fixed;
+}
+
+.all-content {
+	display:none;
+}
+
+table.csvtohtml tr.trhide, table.csvtohtml.responsive-csvtohtml tr.trhide { 
+    display: none !important;
+}
+
+table.csvtohtml.responsive-csvtohtml { 
+    width: 100% !important;
+    border-collapse: collapse !important;
+}
+
+/* sorting stuff */
+table.csvtohtml-sortable thead th {
+	cursor:pointer;
+}
+
+table.csvtohtml-sortable.arrows thead th {
+	background-image: url('../img/bg.gif') !important;
+    cursor: pointer;
+    background-repeat: no-repeat !important;
+    background-position: right center !important;
+}
+
+table.csvtohtml-sortable.arrows thead th.desc {
+	background-image: url('../img/asc.gif') !important;
+}
+
+table.csvtohtml-sortable.arrows thead th.asc {
+	background-image: url('../img/desc.gif') !important;
+}
+
+
+/* styling for guessonecol sourcetype */
+table.csvtohtml tbody tr td span {
+	display: block;
+} 
+
+
+/* shortcode generation css */
+.flexcontainer.shortcodegenerator-csvtohtml {
+	display:flex;
+	gap:1%;
+	align-items: baseline;
+	flex-wrap: wrap;
+}
+
+.flexitem.shortcodegenerator-csvtohtml {
+	flex-basis:49%;
+	max-width:49%;
+}
+
+#update_shortcode {
+	margin-top:2em;
+	padding:0.5em;
+	background:rgb(238, 238, 138)
+}
+
+#update_shortcode:hover {
+	cursor:pointer;
+}
+
+#dynamic_form #new_shortcode {
+	display: block;	
+	font-weight:normal;
+	padding:1em;
+	border:1px solid #b9c9ac;
+	line-height: normal;
+	overflow:auto;
+}
+
+#dynamic_form .csvtohtml-p.admin {
+    width:96%;
+    overflow:auto;
+}
+
+#dynamic_form div.csvtohtml-p.admin h2 {
+    margin:1em 0;    
+    text-align:left;   
+}
+
+#dynamic_form div.csvtohtml-p.admin h2:first-child {
+	padding:1em;
+	margin:0.2em;
+}
+
+#dynamic_form div.csvtohtml-p.admin h2:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#dynamic_form div.csvtohtml-p.admin table {
+    display:none;
+}
+
+#dynamic_form #include_shortcode_str, #dynamic_form #exclude_shortcode_str, #dynamic_form #hide_shortcode_str, #dynamic_form #include_searchcols_shortcode_str, #dynamic_form #include_filtercols_shortcode_str {
+    display:none;
+}
+
+#dynamic_form .csvtohtml-p > table {
+    margin-left:2em;
+}
+
+#dynamic_form #sort_str, #dynamic_form #sort_str_direction {display:none;}
+#dynamic_form .textlong {width:400px;}
+#dynamic_form #uploadpaths {display:none;}
+#dynamic_form #fileview {display:none;}
+#dynamic_form .pathlink, #dynamic_form .filelink {display:block;}
+#dynamic_form .warning {background:yellow;color:#333;font-weight:bold;}
+#dynamic_form .error {background:red;color:#eee;font-weight: bold;}
+#dynamic_form .check {display:block;margin-bottom:0.5em;}
+#dynamic_form #table_in_cell_cols {display:none;}
+
+#dynamic_form div.selectedsection h2 {
+    display:block;
+    background:#b9c9ac;
+    font-weight: bold !important;
+}
+
+
+table.csvtohtml.responsive-csvtohtml tbody tr th {
+    position: sticky;
+    left: 0;
+}
+
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+	table.csvtohtml.responsive-csvtohtml, 
+    table.csvtohtml.responsive-csvtohtml thead, 
+    table.csvtohtml.responsive-csvtohtml tbody, 
+    table.csvtohtml.responsive-csvtohtml th, 
+    table.csvtohtml.responsive-csvtohtml td, 
+    table.csvtohtml.responsive-csvtohtml tr { 
+		display: block !important 
+	}
+	
+	table.csvtohtml.responsive-csvtohtml thead tr { 
+		position: absolute !important;
+		top: -9999px !important;
+		left: -9999px !important;
+	}
+
+	table.csvtohtml.responsive-csvtohtml tbody th {
+		background: transparent !important;
+		text-align: left !important;
+		font-weight: normal !important;		
+	}
+	
+	table.csvtohtml.responsive-csvtohtml .td { 
+	    position: relative !important;
+		padding-left: 50% !important; 
+	}
+	
+	table.csvtohtml.responsive-csvtohtml .td:before { 
+		position: absolute;
+		top: 0 !important;
+		left: 0 !important;
+		width: 45% !important; 
+		white-space: nowrap !important;
+	}
+}
+
+
+#upload-result {
+	font-weight:bold;
+	color:#000;
+	font-size:1.2em;
+	background-color:#f4f8f1;
+	padding:0.5em;
+	border-top:2px solid #000;
+	border-bottom:2px solid #000;
+}
